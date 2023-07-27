@@ -10,8 +10,8 @@
     <script>
         // JavaScript code to get the current URL
         var currentURL = window.location.href;
-        //document.getElementById('urlInput').value = currentURL;
         console.log('currentURL=>', currentURL);
+        document.getElementById('urlInput').value = currentURL;
 
     </script>
 
@@ -25,7 +25,7 @@
         <input type=hidden name="lead_source" value="Holloway Website">
         <input type=hidden name="Interested_In__c" value="Custom Moulding">
         <input type=hidden name="W2L_URL__c" value="https://addwebToLeadURL.com">
-        <input type="text" id="urlInput" name="W2L_URL__c" value={currentURL} />
+        <input type="text" id="urlInput" name="W2L_URL__c" value="" />
         <!--<label for="urlInput">Current URL:</label>
         <input type="text" id="urlInput" readonly />-->
 
