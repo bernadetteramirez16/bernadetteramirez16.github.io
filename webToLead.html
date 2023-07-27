@@ -18,10 +18,7 @@
         <!--Other hidden default fields-->
         <input type=hidden name="lead_source" value="Holloway Website">
         <input type=hidden name="Interested_In__c" value="Custom Moulding">
-        <input type=hidden name="W2L_URL__c" value="https://addwebToLeadURL.com">
-        <input type="text" id="urlInput" name="W2L_URL__c" value="" />
-        
-
+        <input type=hidden id="urlInput" name="W2L_URL__c" value="" />
 
         <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20"
             type="text" required /><br />
@@ -52,6 +49,7 @@
         var currentURL = window.location.href;
         console.log('currentURL=>', currentURL);
         document.getElementById('urlInput').value = currentURL;
+        console.log('W2L_URL__c = > ' , document.getElementById('urlInput').value);
 
     </script>
 
