@@ -3,23 +3,21 @@
 
 <head>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-    <title>Test HTML Page</title>
+    <script src="webToLead.js"></script>
 </head>
 
 <body>
-
-
     <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
         <!--Salesforce Org ID-->
         <input type=hidden name="oid" value="00DBn000001HLqf">
         <!--Add Return URL on click of submit button-->
-        <input type=hidden id="retURL" name="retURL" value="">
+        <input type=hidden id="retURL" name="retURL" value={currentURL}>
         <!--Other hidden default fields-->
         <input type=hidden name="lead_source" value="Holloway Website">
         <input type=hidden name="Interested_In__c" value="Custom Moulding">
         <input type=hidden name="country" value="Australia">
-        <input type=hidden id="urlInput" name="W2L_URL__c" value="" />
+        <input type=hidden id="urlInput" name="W2L_URL__c" value={currentURL} />
 
         <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20"
             type="text" required />
@@ -53,26 +51,11 @@
         </select>
         <br />
         <label for="description">Message</label><textarea name="description" required></textarea><br>
-
-
         <br />
         <br />
         <br />
-
         <input type="submit" name="submit">
-
     </form>
-
-    <script>
-        // JavaScript code to get the current URL
-        var currentURL = window.location.href;
-        console.log('currentURL=>', currentURL);
-        document.getElementById('urlInput').value = currentURL;
-        document.getElementById('retURL').value = currentURL;
-        console.log('W2L_URL__c = > ', document.getElementById('urlInput').value);
-
-    </script>
-
 </body>
 
 </html>
