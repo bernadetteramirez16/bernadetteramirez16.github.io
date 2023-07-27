@@ -1,5 +1,6 @@
 
-// JavaScript code to get the current URL
+//Web-toLead js controller
+
 var currentURL = window.location.href;
 console.log('currentURL=>', currentURL);
 
