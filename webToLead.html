@@ -7,14 +7,14 @@
 </head>
 
 <body>
-    
+
 
     <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
         <!--Salesforce Org ID-->
         <input type=hidden name="oid" value="00DBn000001HLqf">
         <!--Add Return URL on click of submit button-->
-        <input type=hidden id = "retURL" name="retURL" value="">
+        <input type=hidden id="retURL" name="retURL" value="">
         <!--Other hidden default fields-->
         <input type=hidden name="lead_source" value="Holloway Website">
         <input type=hidden name="Interested_In__c" value="Custom Moulding">
@@ -35,8 +35,20 @@
         <label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" size="20" type="text"
             required /><br />
 
-        <label for="state">State</label><input id="state" maxlength="20" name="State_from_Web__c" size="20" type="text"
-            required /><br>
+        <label for="state">State</label>
+        <select id="state" name="state" required>
+            <option value="">--None--</option>
+            <option value="Australian Capital Territory">Australian Capital Territory</option>
+            <option value="New South Wales">New South Wales</option>
+            <option value="Northern Territory">Northern Territory</option>
+            <option value="Queensland">Queensland</option>
+            <option value="South Australia">South Australia</option>
+            <option value="Tasmania">Tasmania</option>
+            <option value="Victoria">Victoria</option>
+            <option value="Western Australia">Western Australia</option>
+        </select>
+
+        <br />
         <br />
         <br />
 
@@ -50,7 +62,7 @@
         console.log('currentURL=>', currentURL);
         document.getElementById('urlInput').value = currentURL;
         document.getElementById('retURL').value = currentURL;
-        console.log('W2L_URL__c = > ' , document.getElementById('urlInput').value);
+        console.log('W2L_URL__c = > ', document.getElementById('urlInput').value);
 
     </script>
 
