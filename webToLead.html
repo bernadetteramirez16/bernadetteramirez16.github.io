@@ -7,13 +7,7 @@
 </head>
 
 <body>
-    <script>
-        // JavaScript code to get the current URL
-        var currentURL = window.location.href;
-        console.log('currentURL=>', currentURL);
-        document.getElementById('urlInput').value = currentURL;
-
-    </script>
+    
 
     <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
@@ -52,6 +46,14 @@
         <input type="submit" name="submit">
 
     </form>
+
+    <script>
+        // JavaScript code to get the current URL
+        var currentURL = window.location.href;
+        console.log('currentURL=>', currentURL);
+        document.getElementById('urlInput').value = currentURL;
+
+    </script>
 
 </body>
 
