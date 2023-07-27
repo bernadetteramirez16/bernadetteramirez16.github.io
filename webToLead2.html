@@ -112,6 +112,10 @@
     </form>
 
     <script>
+        var currentURL = window.location.href;
+        document.getElementById('urlInput').value = currentURL;
+        document.getElementById('retURL').value = currentURL;
+
         const cadCheckbox = document.getElementById('3DCAD');
         const fileFormat = document.getElementById('fileFormat');
         const fileFormatInput = document.getElementById('fileFormatInput');
