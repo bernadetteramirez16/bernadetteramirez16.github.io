@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <title>Test HTML Page</title>
+</head>
+
+<body>
+    <script>
+        // JavaScript code to get the current URL
+        var currentURL = window.location.href;
+        //document.getElementById('urlInput').value = currentURL;
+        console.log('currentURL', currentURL);
+
+    </script>
+
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+        <!--Salesforce Org ID-->
+        <input type=hidden name="oid" value="00DBn000001HLqf">
+        <!--Add Return URL on click of submit button-->
+        <input type=hidden name="retURL" value="http://www.google.com">
+        <!--Other hidden default fields-->
+        <input type=hidden name="lead_source" value="Holloway Website">
+        <input type=hidden name="Interested_In__c" value="Custom Moulding">
+        <input type=hidden name="W2L_URL__c" value="https://addwebToLeadURL.com">
+        <!-- <label for="urlInput">Current URL:</label>
+        <input type="text" id="urlInput" readonly /> -->
+
+
+        <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20"
+            type="text" required /><br />
+
+        <label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20"
+            type="text" required /><br />
+
+        <label for="company">Company</label><input id="company" maxlength="40" name="company" size="20" type="text"
+            required /><br />
+
+        <label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text"
+            required /><br />
+
+        <label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" size="20" type="text"
+            required /><br />
+
+        <label for="state">State</label><input id="state" maxlength="20" name="State_from_Web__c" size="20" type="text"
+            required /><br>
+        <br />
+        <br />
+
+        <input type="submit" name="submit">
+
+    </form>
+
+</body>
+
+</html>
