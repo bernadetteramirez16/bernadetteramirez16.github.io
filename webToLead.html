@@ -14,7 +14,7 @@
         <!--Salesforce Org ID-->
         <input type=hidden name="oid" value="00DBn000001HLqf">
         <!--Add Return URL on click of submit button-->
-        <input type=hidden name="retURL" value="http://www.google.com">
+        <input type=hidden name="retURL" value="">
         <!--Other hidden default fields-->
         <input type=hidden name="lead_source" value="Holloway Website">
         <input type=hidden name="Interested_In__c" value="Custom Moulding">
@@ -49,6 +49,7 @@
         var currentURL = window.location.href;
         console.log('currentURL=>', currentURL);
         document.getElementById('urlInput').value = currentURL;
+        document.getElementById('retURL').value = currentURL;
         console.log('W2L_URL__c = > ' , document.getElementById('urlInput').value);
 
     </script>
