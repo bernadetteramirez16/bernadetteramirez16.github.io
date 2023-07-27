@@ -54,8 +54,9 @@
         <input type="checkbox" id="3DCAD" name="3DCAD"><br />
 
         <div id="fileFormat" style="display: none;">
-            <label for="additionalInput">Additional Input:</label>
-            <select id="fileFormatSelect" name="3DCAD_File_Format__c">
+            <label for="fileFormatSelect">3D CAT Format:</label>
+            <select id="fileFormatSelect" name="3DCAD_File_Format__c" required>
+                <option value="">--None--</option>
                 <option value="STEP File">STEP File</option>
                 <option value="XT File">XT File</option>
             </select><br />
@@ -70,6 +71,7 @@
 
         <label for="frequencyOfOrders">Frequency of Orders</label>
         <select id="frequencyOfOrders" name="Frequency_of_Orders__c">
+            <option value="">--None--</option>
             <option value="Ongoing">Ongoing</option>
             <option value="One Off">One Off</option>
             <option value="Not Sure">Not Sure</option>
@@ -77,6 +79,7 @@
 
         <label for="projectTimeFrame">Project Time Frame</label>
         <select id="projectTimeFrame" name="Project_Time_Frame__c">
+            <option value="">--None--</option>
             <option value="0 – 6 months">0 – 6 months</option>
             <option value="6 – 12 months">6 – 12 months</option>
             <option value="12 – 24 months">12 – 24 months</option>
@@ -93,6 +96,7 @@
 
         <label for="typeOfInjectionMould">Type of injection mould required</label>
         <select id="typeOfInjectionMould" name="Type_of_Injection_Mould__c">
+            <option value="">--None--</option>
             <option value="Prototype Mould">Prototype mould (cheaper option) – designed for low volume production
                 (couple thousand units Max).</option>
             <option value="Full Production Mould">Full production mould – Can be designed to manufacture as many units
@@ -119,7 +123,7 @@
             fileFormat.style.display = this.checked ? 'block' : 'none';
         });
 
-        pmsCode.addEventListener('change', function () {
+        withSpecificColors.addEventListener('change', function () {
             pmsCode.style.display = this.checked ? 'block' : 'none';
         });
     </script>
