@@ -54,8 +54,8 @@
         <input type="checkbox" id="3DCAD" name="3DCAD"><br />
 
         <div id="fileFormat" style="display: none;">
-            <label for="fileFormatSelect">3D CAT Format:</label>
-            <select id="fileFormatSelect" name="3DCAD_File_Format__c" required>
+            <label for="fileFormatSelect">3D CAD Format:</label>
+            <select id="fileFormatSelect" name="X3D_CAD_Format__c" required>
                 <option value="">--None--</option>
                 <option value="STEP File">STEP File</option>
                 <option value="XT File">XT File</option>
@@ -94,17 +94,16 @@
             <input id="pmsCodeInput" name="PMS_Code__c" size="20" type="text" required /><br />
         </div>
 
-        <label for="typeOfInjectionMould">Type of injection mould required</label>
-        <select id="typeOfInjectionMould" name="Type_of_Injection_Mould__c">
+        <label for="typeOfInjectionMould">Type of injection mould required</label><br />
+        <select id="typeOfInjectionMould" name="Type_of_injection_mould__c">
             <option value="">--None--</option>
-            <option value="Prototype Mould">Prototype mould (cheaper option) – designed for low volume production
+            <option value="Prototype mould">Prototype mould (cheaper option) – designed for low volume production
                 (couple thousand units Max).</option>
-            <option value="Full Production Mould">Full production mould – Can be designed to manufacture as many units
+            <option value="Full production mould">Full production mould – Can be designed to manufacture as many units
                 as needed</option>
         </select><br />
 
-        <label for="materialRequirements">Specific Material Requirements</label><textarea
-            name="description"></textarea><br>
+        <label for="materialRequirements">Specific Material Requirements</label><br />
         <textarea id="materialRequirements" name="description" rows="4" cols="50"
             placeholder="Any information on a specific material you would like this product made of. (i.e does the material need any specific requirements)"></textarea>
 
