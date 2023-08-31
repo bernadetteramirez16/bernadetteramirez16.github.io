@@ -3,14 +3,20 @@
 
 <head>
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") { var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value); elems["ts"] = JSON.stringify(new Date().getTime()); document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+    </script>
 </head>
 
 <body>
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
         <!--Salesforce Org ID-->
+        <input type=hidden name='captcha_settings'
+            value='{"keyname":"HollowayGroup","fallback":"true","orgId":"00D2w000009ZwDy","ts":""}'>
         <input type=hidden name="oid" value="00D2w000009ZwDy">
-        <!--Add Return URL on click of submit button-->
+        <!--ADD THANKYOU PAGE URL-->
         <input type=hidden id="retURL" name="retURL" value="">
         <!--Other hidden default fields-->
         <input type=hidden name="lead_source" value="Holloway Website">
