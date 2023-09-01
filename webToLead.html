@@ -69,7 +69,8 @@
         <br />
         <br />
         <!-- <div class="g-recaptcha" data-sitekey="6LejSe4nAAAAANS50qJUEGtW19jq3O9yRKQTKQ4-" data-callback="enableBtn"> -->
-        <div class="g-recaptcha" data-sitekey="6LdunuonAAAAAFE2_K4T_ENB3jmgvX5dU3pPc4Nl"></div><br>
+        <div class="g-recaptcha" data-sitekey="6LdunuonAAAAAFE2_K4T_ENB3jmgvX5dU3pPc4Nl" data-callback="enableBtn">
+        </div><br>
         </div>
         <br />
         <br />
@@ -82,7 +83,6 @@
         // JavaScript code to get the current URL
         var currentURL = window.location.href;
         document.getElementById('urlInput').value = currentURL;
-        document.getElementById('submitbutton').disabled = true;
         function enableBtn() {
             document.getElementById("submitbutton").disabled = false;
         }
